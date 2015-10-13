@@ -37,7 +37,6 @@ int main()
 			b[i] = s[i] - '0';
 		}
 		int sum = 0;
-		int number;
 			for (int i = 0; i < strlen(s); i++) {
 				sum += b[i];
 			}
