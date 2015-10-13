@@ -8,7 +8,7 @@ int *split(long a) {
 	int n = 0;
 	while (a / (long)pow(10, n) != 0)
 	{
-		n++;  
+		n++;   
 
 	}
 	long sum = a;
