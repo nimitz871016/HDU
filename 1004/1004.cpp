@@ -28,7 +28,7 @@ int main()
 					a[temp_s] = a[temp_s]++;
 					flag = true;
 				}
-			}
+			} 
 			if (!flag)
 			{
 				a.insert(pair<string,int>(temp_s,0));
