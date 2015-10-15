@@ -15,7 +15,7 @@ int getLastDigit(long a) {
 		n--;
 	}
 	return result;
-}
+} 
 
 int main()
 {
