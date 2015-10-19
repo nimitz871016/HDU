@@ -22,20 +22,20 @@ void bigNumber_add(char *c, char *d) {
 	}
 	int j = 0;
 	int i;
-	for (i = strlend - 1; i  >= 0 ; i--,j++) {
+	for (i = strlend - 1; i >= 0; i--, j++) {
 		e[j] = c[i + strlenc - strlend] + d[i] - 48;
 	}
-	for (i = strlenc - strlend - 1; i >= 0 ; i--)
+	for (i = strlenc - strlend - 1; i >= 0; i--)
 	{
 		e[j] = c[i];
 		j++;
 	}
 	int num = strlenc;
-	
+
 	for (i = 0; i < strlenc - 1; i++)
 	{
 		e[i + 1] += (e[i] - 48) / 10;
-		e[i] -= (e[i] - 48)/10 * 10;
+		e[i] -= (e[i] - 48) / 10 * 10;
 	}
 	if (e[i] > 58)
 	{
@@ -45,7 +45,7 @@ void bigNumber_add(char *c, char *d) {
 	}
 	for (int i = num - 1; i >= 0; i--)
 	{
-		printf("%d",e[i] - '0');
+		printf("%d", e[i] - '0');
 	}
 	printf("\n");
 }
@@ -53,19 +53,19 @@ void bigNumber_add(char *c, char *d) {
 int main()
 {
 	int n;
-	scanf("%d",&n);
-	char c[1000], d[1000],e[1000];
+	scanf("%d", &n);
+	char c[1000], d[1000], e[1000];
 	for (int i = 0; i < n; i++)
 	{
-		scanf("%s %s",c,d);
+		scanf("%s %s", c, d);
 		printf("Case %d:\n", i + 1);
-		printf("%s + %s = ",c,d);
+		printf("%s + %s = ", c, d);
 		bigNumber_add(c, d);
-		if (i!=n-1)
+		if (i != n - 1)
 		{
 			printf("\n");
 		}
 	}
-    return 0;
+	return 0;
 }
 
